@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  <display-name>JavaEEServlets</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ControladorEmisora</display-name>
+    <servlet-name>ControladorEmisora</servlet-name>
+    <servlet-class>es.accenture.emisora.ControladorEmisora</servlet-class>
+  </servlet>
+  <servlet>
+    <description></description>
+    <display-name>DetalleGrupo</display-name>
+    <servlet-name>DetalleGrupo</servlet-name>
+    <servlet-class>es.accenture.emisora.DetalleGrupo</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ControladorEmisora</servlet-name>
+    <url-pattern>/ControladorEmisora</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DetalleGrupo</servlet-name>
+    <url-pattern>/DetalleGrupo</url-pattern>
+  </servlet-mapping>
+</web-app>
