@@ -4,9 +4,19 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * @author Andrea Ravagli
+ * 
+ * clase encargada de gestionar la conexion con la base de datos
+ */
 public class DBUtilidades {
 	private static Connection conexionDB;
 
+	/**
+	 * metodo encargado de abrir una conexion con la base de datos
+	 * si la conexion es null, abre una nueva de lo contrario retorna una existente
+	 * @return la conexion con la base de datos
+	 */
 	public static Connection abrirConexionBD() {
 		try {
 			if (conexionDB == null || conexionDB.isClosed()) {
@@ -22,6 +32,9 @@ public class DBUtilidades {
 		return conexionDB;
 	}
 
+	/**
+	 * metodo encargado de cerrar la conexion con la base de datos
+	 */
 	public static void cerrarConexionBD() {
 		try {
 			conexionDB.close();

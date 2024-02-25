@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 /**
+ * @author Andrea Ravagli
  * Servlet implementation class ControladorEmisora
  */
 public class ControladorEmisora extends HttpServlet {

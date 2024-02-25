@@ -7,14 +7,23 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Andrea Ravagli
+ * 
+ * Clase con metodos estaticos con las consultas a la base de datos
+ */
 public class OperacionesGrupo {
 
+	/**
+	 * metodo que retorna el listado de grupos
+	 * @return listado de grupos
+	 */
 	public static List<Grupo> obtenerListadoGrupo() {
 		List<Grupo> lista = new ArrayList<>();
 
 		Connection conexion = DBUtilidades.abrirConexionBD();
 
-		String query = "SELECT grupoId,nombre,origen,creacion,genero FROM grupos";
+		String query = "SELECT grupoId,nombre,origen,creacion,genero FROM GRUPOS";
 
 		Statement statement = null;
 		ResultSet resultSet = null;
@@ -48,6 +57,11 @@ public class OperacionesGrupo {
 		return lista;
 	}
 
+	/**
+	 * metodo encargado de consultar los detalles del grupo
+	 * @param idGrupo
+	 * @return el objeto Grupo
+	 */
 	public static Grupo obtenerDetalleGrupo(String idGrupo) {
 		Grupo grupo = new Grupo();
 		
